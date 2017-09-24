@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EF5Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BatchUpload">
+    <Key>
+      <PropertyRef Name="BatchUpload_Id" />
+    </Key>
+    <Property Name="BatchUpload_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BatchUpload_SupplierId" Type="Int32" Nullable="false" />
+    <Property Name="BatchUpload_TypeDef" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUpload_FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BatchUpload_StatusDef" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUpload_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUpload_TotalCount" Type="Int32" Nullable="false" />
+    <Property Name="BatchUpload_SuccessCount" Type="Int32" Nullable="false" />
+    <Property Name="BatchUpload_FailCount" Type="Int32" Nullable="false" />
+    <Property Name="BatchUpload_UploadDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BatchUpload_StartDateTime" Type="DateTime" Precision="3" />
+    <Property Name="BatchUpload_FinishDateTime" Type="DateTime" Precision="3" />
+    <Property Name="BatchUpload_Note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="BatchUpload_UploadGuid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUpload_HasDetail" Type="Boolean" />
+    <Property Name="BatchUpload_FailDownloadPath" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="BatchUpload_EstimateFinishMinutes" Type="Int32" />
+    <Property Name="BatchUpload_AverageSecondsPerRecord" Type="Int32" />
+    <Property Name="BatchUpload_CreatedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BatchUpload_CreatedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUpload_UpdatedTimes" Type="Byte" Nullable="false" />
+    <Property Name="BatchUpload_UpdatedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BatchUpload_UpdatedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUpload_ValidFlag" Type="Boolean" Nullable="false" />
+    <Property Name="BatchUpload_Rowversion" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="BatchUpload_ExecuteTaskType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BatchUpload_ExportFileDownloadPath" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BatchUploadData">
+    <Key>
+      <PropertyRef Name="BatchUploadData_Id" />
+    </Key>
+    <Property Name="BatchUploadData_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BatchUploadData_BatchUploadId" Type="Int64" Nullable="false" />
+    <Property Name="BatchUploadData_SupplierId" Type="Int32" Nullable="false" />
+    <Property Name="BatchUploadData_TypeDef" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUploadData_StatusDef" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUploadData_Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BatchUploadData_Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BatchUploadData_CreatedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BatchUploadData_CreatedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUploadData_UpdatedTimes" Type="Byte" Nullable="false" />
+    <Property Name="BatchUploadData_UpdatedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUploadData_UpdatedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BatchUploadData_ValidFlag" Type="Boolean" Nullable="false" />
+    <Property Name="BatchUploadData_Rowversion" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityContainer Name="EF5" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BatchUpload" EntityType="Self.BatchUpload" />
+    <EntitySet Name="BatchUploadData" EntityType="Self.BatchUploadData" />
+  </EntityContainer>
+</Schema>

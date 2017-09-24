@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EF5EntityStoreContainer" CdmEntityContainer="EF5Entities">
+    <EntitySetMapping Name="BatchUploadData">
+      <EntityTypeMapping TypeName="EF5Entity.BatchUploadData">
+        <MappingFragment StoreEntitySet="BatchUploadData">
+          <ScalarProperty Name="BatchUploadData_Id" ColumnName="BatchUploadData_Id" />
+          <ScalarProperty Name="BatchUploadData_BatchUploadId" ColumnName="BatchUploadData_BatchUploadId" />
+          <ScalarProperty Name="BatchUploadData_SupplierId" ColumnName="BatchUploadData_SupplierId" />
+          <ScalarProperty Name="BatchUploadData_TypeDef" ColumnName="BatchUploadData_TypeDef" />
+          <ScalarProperty Name="BatchUploadData_StatusDef" ColumnName="BatchUploadData_StatusDef" />
+          <ScalarProperty Name="BatchUploadData_Title" ColumnName="BatchUploadData_Title" />
+          <ScalarProperty Name="BatchUploadData_Data" ColumnName="BatchUploadData_Data" />
+          <ScalarProperty Name="BatchUploadData_CreatedDateTime" ColumnName="BatchUploadData_CreatedDateTime" />
+          <ScalarProperty Name="BatchUploadData_CreatedUser" ColumnName="BatchUploadData_CreatedUser" />
+          <ScalarProperty Name="BatchUploadData_UpdatedTimes" ColumnName="BatchUploadData_UpdatedTimes" />
+          <ScalarProperty Name="BatchUploadData_UpdatedUser" ColumnName="BatchUploadData_UpdatedUser" />
+          <ScalarProperty Name="BatchUploadData_UpdatedDateTime" ColumnName="BatchUploadData_UpdatedDateTime" />
+          <ScalarProperty Name="BatchUploadData_ValidFlag" ColumnName="BatchUploadData_ValidFlag" />
+          <ScalarProperty Name="BatchUploadData_Rowversion" ColumnName="BatchUploadData_Rowversion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

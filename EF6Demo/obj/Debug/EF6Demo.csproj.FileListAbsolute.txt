@@ -1,0 +1,11 @@
+D:\Repo\Sandbox\EFDemo\EFDemo\EF6Demo\bin\Debug\EF6Demo.exe.config
+D:\Repo\Sandbox\EFDemo\EFDemo\EF6Demo\bin\Debug\EF6Demo.exe
+D:\Repo\Sandbox\EFDemo\EFDemo\EF6Demo\bin\Debug\EF6Demo.pdb
+D:\Repo\Sandbox\EFDemo\EFDemo\EF6Demo\bin\Debug\EntityFramework.dll
+D:\Repo\Sandbox\EFDemo\EFDemo\EF6Demo\bin\Debug\EntityFramework.SqlServer.dll
+D:\Repo\Sandbox\EFDemo\EFDemo\EF6Demo\bin\Debug\EntityFramework.xml
+D:\Repo\Sandbox\EFDemo\EFDemo\EF6Demo\bin\Debug\EntityFramework.SqlServer.xml
+D:\Repo\Sandbox\EFDemo\EFDemo\EF6Demo\bin\Debug\zh-Hant\EntityFramework.resources.dll
+D:\Repo\Sandbox\EFDemo\EFDemo\EF6Demo\obj\Debug\EF6Demo.exe
+D:\Repo\Sandbox\EFDemo\EFDemo\EF6Demo\obj\Debug\EF6Demo.pdb
+D:\Repo\Sandbox\EFDemo\EFDemo\EF6Demo\obj\Debug\EF6Demo.csprojResolveAssemblyReference.cache

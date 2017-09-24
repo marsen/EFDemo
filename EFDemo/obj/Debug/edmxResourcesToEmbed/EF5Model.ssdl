@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EF5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BatchUpload">
+    <Key>
+      <PropertyRef Name="BatchUpload_Id" />
+    </Key>
+    <Property Name="BatchUpload_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchUpload_SupplierId" Type="int" Nullable="false" />
+    <Property Name="BatchUpload_TypeDef" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BatchUpload_FileName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="BatchUpload_StatusDef" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="BatchUpload_Code" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="BatchUpload_TotalCount" Type="int" Nullable="false" />
+    <Property Name="BatchUpload_SuccessCount" Type="int" Nullable="false" />
+    <Property Name="BatchUpload_FailCount" Type="int" Nullable="false" />
+    <Property Name="BatchUpload_UploadDateTime" Type="datetime" Nullable="false" />
+    <Property Name="BatchUpload_StartDateTime" Type="datetime" />
+    <Property Name="BatchUpload_FinishDateTime" Type="datetime" />
+    <Property Name="BatchUpload_Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="BatchUpload_UploadGuid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BatchUpload_HasDetail" Type="bit" />
+    <Property Name="BatchUpload_FailDownloadPath" Type="nvarchar" MaxLength="1000" />
+    <Property Name="BatchUpload_EstimateFinishMinutes" Type="int" />
+    <Property Name="BatchUpload_AverageSecondsPerRecord" Type="int" />
+    <Property Name="BatchUpload_CreatedDateTime" Type="datetime" Nullable="false" />
+    <Property Name="BatchUpload_CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BatchUpload_UpdatedTimes" Type="tinyint" Nullable="false" />
+    <Property Name="BatchUpload_UpdatedDateTime" Type="datetime" Nullable="false" />
+    <Property Name="BatchUpload_UpdatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BatchUpload_ValidFlag" Type="bit" Nullable="false" />
+    <Property Name="BatchUpload_Rowversion" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="BatchUpload_ExecuteTaskType" Type="varchar" MaxLength="50" />
+    <Property Name="BatchUpload_ExportFileDownloadPath" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="BatchUploadData">
+    <Key>
+      <PropertyRef Name="BatchUploadData_Id" />
+    </Key>
+    <Property Name="BatchUploadData_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchUploadData_BatchUploadId" Type="bigint" Nullable="false" />
+    <Property Name="BatchUploadData_SupplierId" Type="int" Nullable="false" />
+    <Property Name="BatchUploadData_TypeDef" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="BatchUploadData_StatusDef" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="BatchUploadData_Title" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="BatchUploadData_Data" Type="nvarchar(max)" />
+    <Property Name="BatchUploadData_CreatedDateTime" Type="datetime" Nullable="false" />
+    <Property Name="BatchUploadData_CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BatchUploadData_UpdatedTimes" Type="tinyint" Nullable="false" />
+    <Property Name="BatchUploadData_UpdatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BatchUploadData_UpdatedDateTime" Type="datetime" Nullable="false" />
+    <Property Name="BatchUploadData_ValidFlag" Type="bit" Nullable="false" />
+    <Property Name="BatchUploadData_Rowversion" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="EF5ModelStoreContainer">
+    <EntitySet Name="BatchUpload" EntityType="Self.BatchUpload" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BatchUploadData" EntityType="Self.BatchUploadData" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

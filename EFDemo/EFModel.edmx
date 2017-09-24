@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EF5Entity.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BatchUploadData">
+          <Key>
+            <PropertyRef Name="BatchUploadData_Id" />
+            <PropertyRef Name="BatchUploadData_CreatedDateTime" />
+          </Key>
+          <Property Name="BatchUploadData_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BatchUploadData_BatchUploadId" Type="bigint" Nullable="false" />
+          <Property Name="BatchUploadData_SupplierId" Type="int" Nullable="false" />
+          <Property Name="BatchUploadData_TypeDef" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="BatchUploadData_StatusDef" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="BatchUploadData_Title" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="BatchUploadData_Data" Type="nvarchar(max)" />
+          <Property Name="BatchUploadData_CreatedDateTime" Type="datetime" Nullable="false" />
+          <Property Name="BatchUploadData_CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BatchUploadData_UpdatedTimes" Type="tinyint" Nullable="false" />
+          <Property Name="BatchUploadData_UpdatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BatchUploadData_UpdatedDateTime" Type="datetime" Nullable="false" />
+          <Property Name="BatchUploadData_ValidFlag" Type="bit" Nullable="false" />
+          <Property Name="BatchUploadData_Rowversion" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="EF5EntityStoreContainer">
+          <EntitySet Name="BatchUploadData" EntityType="Self.BatchUploadData" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EF5Entity" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BatchUploadData">
+          <Key>
+            <PropertyRef Name="BatchUploadData_Id" />
+            <PropertyRef Name="BatchUploadData_CreatedDateTime" />
+          </Key>
+          <Property Name="BatchUploadData_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BatchUploadData_BatchUploadId" Type="Int64" Nullable="false" />
+          <Property Name="BatchUploadData_SupplierId" Type="Int32" Nullable="false" />
+          <Property Name="BatchUploadData_TypeDef" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BatchUploadData_StatusDef" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BatchUploadData_Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BatchUploadData_Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BatchUploadData_CreatedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BatchUploadData_CreatedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BatchUploadData_UpdatedTimes" Type="Byte" Nullable="false" />
+          <Property Name="BatchUploadData_UpdatedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BatchUploadData_UpdatedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BatchUploadData_ValidFlag" Type="Boolean" Nullable="false" />
+          <Property Name="BatchUploadData_Rowversion" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityContainer Name="EF5Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BatchUploadData" EntityType="Self.BatchUploadData" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EF5EntityStoreContainer" CdmEntityContainer="EF5Entities">
+          <EntitySetMapping Name="BatchUploadData">
+            <EntityTypeMapping TypeName="EF5Entity.BatchUploadData">
+              <MappingFragment StoreEntitySet="BatchUploadData">
+                <ScalarProperty Name="BatchUploadData_Id" ColumnName="BatchUploadData_Id" />
+                <ScalarProperty Name="BatchUploadData_BatchUploadId" ColumnName="BatchUploadData_BatchUploadId" />
+                <ScalarProperty Name="BatchUploadData_SupplierId" ColumnName="BatchUploadData_SupplierId" />
+                <ScalarProperty Name="BatchUploadData_TypeDef" ColumnName="BatchUploadData_TypeDef" />
+                <ScalarProperty Name="BatchUploadData_StatusDef" ColumnName="BatchUploadData_StatusDef" />
+                <ScalarProperty Name="BatchUploadData_Title" ColumnName="BatchUploadData_Title" />
+                <ScalarProperty Name="BatchUploadData_Data" ColumnName="BatchUploadData_Data" />
+                <ScalarProperty Name="BatchUploadData_CreatedDateTime" ColumnName="BatchUploadData_CreatedDateTime" />
+                <ScalarProperty Name="BatchUploadData_CreatedUser" ColumnName="BatchUploadData_CreatedUser" />
+                <ScalarProperty Name="BatchUploadData_UpdatedTimes" ColumnName="BatchUploadData_UpdatedTimes" />
+                <ScalarProperty Name="BatchUploadData_UpdatedUser" ColumnName="BatchUploadData_UpdatedUser" />
+                <ScalarProperty Name="BatchUploadData_UpdatedDateTime" ColumnName="BatchUploadData_UpdatedDateTime" />
+                <ScalarProperty Name="BatchUploadData_ValidFlag" ColumnName="BatchUploadData_ValidFlag" />
+                <ScalarProperty Name="BatchUploadData_Rowversion" ColumnName="BatchUploadData_Rowversion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

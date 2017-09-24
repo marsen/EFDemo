@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EF5Entity" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BatchUploadData">
+    <Key>
+      <PropertyRef Name="BatchUploadData_Id" />
+      <PropertyRef Name="BatchUploadData_CreatedDateTime" />
+    </Key>
+    <Property Name="BatchUploadData_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BatchUploadData_BatchUploadId" Type="Int64" Nullable="false" />
+    <Property Name="BatchUploadData_SupplierId" Type="Int32" Nullable="false" />
+    <Property Name="BatchUploadData_TypeDef" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUploadData_StatusDef" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUploadData_Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BatchUploadData_Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BatchUploadData_CreatedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BatchUploadData_CreatedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUploadData_UpdatedTimes" Type="Byte" Nullable="false" />
+    <Property Name="BatchUploadData_UpdatedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BatchUploadData_UpdatedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BatchUploadData_ValidFlag" Type="Boolean" Nullable="false" />
+    <Property Name="BatchUploadData_Rowversion" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityContainer Name="EF5Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BatchUploadData" EntityType="Self.BatchUploadData" />
+  </EntityContainer>
+</Schema>
